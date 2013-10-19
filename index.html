@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Science JSON</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/prettify.css">
+		<link rel="stylesheet" href="css/master.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<br>
+			<div class="jumbotron text-center black-bg">
+				<h1>Science JSON</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Introduction</h1>
+					<hr>
+					<p>Science JSON is a generic data structure format for describing different types of data samples. It was created for Science Hack Day Guelph 2013 by Edward Kim and John Yeung.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Explanation</h1>
+					<hr>
+					<p>Science JSON is a fairly open format, and has fields with data types that can be used to describe a wide array of data structures. See the table below.</p>
+
+					<br>
+
+					<table class="table table-striped">
+						<tr><th>Field</th><th>Required?</th><th>Data Type</th></tr>
+						<tr><td>Experimenter Name</td><td>Yes</td><td>String</td></tr>
+						<tr><td>Sample Name</td><td>Yes</td><td>String</td></tr>
+						<tr><td>Date</td><td>Yes</td><td>Dictionary (DateType : Date)</td></tr>
+						<tr><td>Procedure</td><td>No</td><td>String (long)</td></tr>
+						<tr><td>Experimental Conditions</td><td>No</td><td>Dictionary (Condition : Value)</td></tr>
+						<tr><td>Apparatus</td><td>Yes</td><td>String (array)</td></tr>
+						<tr><td>Chemical Constituents</td><td>No</td><td>String (array)</td></tr>
+						<tr><td>Other Constituents</td><td>No</td><td>String (array)</td></tr>
+						<tr><td>Figures</td><td>No</td><td>String/URL (array)</td></tr>
+					</table>
+
+					<br>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<h1>Example</h1>
+						<hr>
+						<pre class="prettyprint">
+{
+	'exp_name' : 'John Doe',
+	'sample_name' : 'sample_001',
+	'date' : {
+		'fabrication_date' : '2010-10-04',
+		'experiment_date' : '2011-10-08'
+	} 
+	'apparatus' : [
+		'optical microscope',
+		'scanning electron microscope'
+	]
+	'exp_cond' : {
+		'temperature' : '298K'
+	}
+}
+						</pre>
+					</div>
+				</div>
+				<hr>
+				<div class="footer text-right">
+					<p>Created for Science Hack Day Guelph 2013</p>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
